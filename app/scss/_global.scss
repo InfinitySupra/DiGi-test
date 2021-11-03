@@ -1,0 +1,93 @@
+@import 'variables';
+@import 'fonts';
+
+html {
+   box-sizing: border-box;
+}
+
+*, *::after, *::before {
+   box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+}
+
+ul, 
+li {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+}
+button {
+   padding: 0;
+   cursor: pointer;
+}
+
+p {
+   padding: 0;
+   margin: 0;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+body {
+   min-height: 320px;
+   overflow-x: hidden;
+   font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 18px;
+   color: $defaultColor;
+}
+// method - one
+// container parameters for @media
+.container {
+   padding: 0 20px;
+}
+@media (min-width: 640px){
+   .container {
+      padding: 0 30px;
+   }
+}
+@media (min-width: 768px){
+   .container {
+      padding: 0 40px;
+   }
+}
+@media (min-width: 1024px){
+   .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+   }
+}
+@media (min-width: 1024px){
+   .container {
+      max-width: 1320px;
+   }
+}
+
+.title {
+   @extend %robotocondensed-400;
+   font-size: 24px;
+   line-height: 28px;
+   color: $accent;
+   position: relative;
+   padding-bottom: 28px;
+   &::after {
+      margin: 0 auto;
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 8px;
+      background-color: $accent;
+      bottom: 0;
+      left: 0;
+      right: 0;
+   }
+}
+
+//---------------------------------
