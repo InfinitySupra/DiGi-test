@@ -21,4 +21,11 @@ $(function(){
          }
       ]
    });
+   $('.message__inner').slick({
+      dots: true,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+   });
 })
